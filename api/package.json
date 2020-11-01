@@ -7,8 +7,8 @@
     "build": "tsc --project ./",
     "start": "nodemon index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write routes/*.ts",
-    "lint": "eslint --fix routes/*.ts"
+    "format": "prettier --write routes/**/*.ts",
+    "lint": "eslint --fix routes/**/*.ts"
   },
   "license": "MIT",
   "dependencies": {
