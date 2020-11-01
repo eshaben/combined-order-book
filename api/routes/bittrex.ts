@@ -10,10 +10,14 @@ interface IParams {
 }
 
 router.get("/", async ({ req, res, next }: IParams) => {
-  const result = await axios.get(
+  const bittrexOrderBook = await axios.get(
     "https://api.bittrex.com/v3/markets/ETH-BTC/orderbook"
   );
-  res.send(result.data);
+  const poloniexOrderBook = await axios.get(
+    "https://poloniex.com/public?command=returnOrderBook&currencyPair=BTC_ETH&depth=25"
+  );
+  res.send({ bittrex: bittrexOrderBook.data, poloniex: poloniexOrderBook.data })
+
 });
 
 export default router;
