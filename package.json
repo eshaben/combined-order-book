@@ -4,9 +4,12 @@
   "private": true,
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "build": "tsc -b packages/x-core packages/x-cli",
+    "build": "tsc -b packages/api packages/ui",
     "test": "lerna run test",
-    "clean": "rimraf packages/**/lib"
+    "clean": "rimraf packages/**/lib",
+    "start": "yarn start:api && yarn start:ui",
+    "start:api": "cd packages/api && yarn start",
+    "start:ui": "cd packages/ui && yarn start"
   },
   "devDependencies": {
     "@types/node": "^8.0.28",

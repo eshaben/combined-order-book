@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+      "baseUrl": "./packages",
+      "paths": {
+        "@combined-order-book/*": ["./*/src"]
+      }
+    }
+  }
