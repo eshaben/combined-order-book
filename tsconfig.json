@@ -1,8 +1,10 @@
 {
+   "extends": "./tsconfig.build.json",
     "compilerOptions": {
       "baseUrl": "./packages",
       "paths": {
         "@combined-order-book/*": ["./*/src"]
       }
-    }
+    },
+    "exclude": ["./*/node_modules", "./*/dist"]
   }

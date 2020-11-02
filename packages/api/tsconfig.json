@@ -1,10 +1,15 @@
 {
+  "extends": "../../tsconfig.build.json",
     "compilerOptions": {
       "target": "es6", // target JavaScript version for compiler output
       "module": "commonjs", // specifies the module manager to be used
       "rootDir": "./", // specifies where the TypeScript files are located
-      "outDir": "./build", // specifies where the compiled output is located
+      "outDir": "./dist", // specifies where the compiled output is located
       "esModuleInterop": true, // compile ES6 modules to commonjs modules
       "strict": true // enable strict type-checking 
-    }
-  }
+    },
+    "include": [
+      "src"
+    ],
+    "exclude": ["node_modules"]
+ }
