@@ -4,7 +4,7 @@ const merge = require("./utils/merge");
 
 const router = express.Router();
 
-router.get("/", async (_req, res) => {
+router.get("/api/full-order-book", async (_req, res) => {
   const bittrexOrderBook = await axios.get("https://api.bittrex.com/v3/markets/ETH-BTC/orderbook");
   const poloniexOrderBook = await axios.get(
     "https://poloniex.com/public?command=returnOrderBook&currencyPair=BTC_ETH&depth=25"
