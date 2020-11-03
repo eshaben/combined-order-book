@@ -10,6 +10,7 @@
     "dev": "concurrently \"npm run api\" \"npm run ui\""
   },
   "dependencies": {
+    "axios": "^0.21.0",
     "babel-polyfill": "^6.26.0",
     "express": "^4.16.3",
     "react": "^16.5.2",
