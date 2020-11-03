@@ -33,6 +33,9 @@ module.exports = {
     // config to run development server
     port: 3000,
     open: true, // automatically open home page on start up
+    proxy: {
+      "/api": "http://localhost:8000", // for sending api requests on the same domain
+    },
   },
   plugins: [
     new CleanWebpackPlugin([outputDirectory]), // removes build folders before building
