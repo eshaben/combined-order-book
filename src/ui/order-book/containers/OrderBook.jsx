@@ -29,11 +29,11 @@ const OrderBook = () => {
     return <div>Loading...</div>;
   }
 
-  if (error) {
+  if (error || (!orderBook.bids && !orderBook.asks)) {
     return (
       <div>
         Uh oh... something went wrong!
-        <div>{error}</div>
+        <div>{error || "Couldn't load order book"}</div>
       </div>
     );
   }
