@@ -14,7 +14,6 @@ const OrderBook = () => {
       try {
         setLoading(true);
         const data = await axios.get(apiUrl);
-        console.log(data.data);
         setOrderBook(data.data);
         setLoading(false);
       } catch (e) {
